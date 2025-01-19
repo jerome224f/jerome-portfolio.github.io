@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jerome J | Portfolio</title>
     <style>
+        /* Global Styles */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
@@ -12,6 +13,8 @@
             background-color: #8bedfc;
             line-height: 1.6;
         }
+
+        /* Header */
         header {
             background: #6f7678;
             color: #ffffff;
@@ -31,9 +34,15 @@
             color: #fff;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
         }
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+        /* Hero Section */
         #hero {
-            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)), url('../images/hero-bg.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)), url('your-image-url-here.jpg') no-repeat center center/cover;
             color: #fff;
             height: 60vh;
             display: flex;
@@ -41,30 +50,52 @@
             align-items: center;
             text-align: center;
             padding: 0 2rem;
+            transition: background 0.3s ease-in-out;
         }
         #hero h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
+
+        /* Section Styling */
         section {
             padding: 3rem 5%;
             margin: 1rem 0;
             background: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
         }
         section h2 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
             color: #0056b3;
         }
-        .skills-list, .experience-list {
-            list-style: none;
-            padding: 0;
+
+        /* Experience Section */
+        .experience-images {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
-        .skills-list li, .experience-list li {
-            margin: 0.5rem 0;
+        .experience-images img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
+        .experience-images img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
         footer {
             background: #333;
             color: #fff;
@@ -75,29 +106,32 @@
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            console.log('portfolio site !');
+            console.log('Portfolio site is live!');
         });
     </script>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <nav>
             <div class="logo">Jerome J</div>
             <ul class="nav-links">
-                <li><a href="#about">About Me</a></li><br>
+                <li><a href="#about">About Me</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section id="hero">
         <div class="hero-content">
             <h1>Glad You're Here</h1>
-            <p> III-Year BBA Student | Aspiring HR Professional & Business Networking </p>
+            <p>III-Year BBA Student | Aspiring HR Professional & Business Networking</p>
         </div>
     </section>
 
+    <!-- About Me Section -->
     <section id="about">
         <h2>About Me</h2>
         <p>I am a motivated BBA student specializing in Business Administration and Human Resources. I have a passion for learning, building connections, and driving organizational success.</p>
@@ -105,30 +139,36 @@
         <p><strong>Other Course:</strong> (CPBFI) 2024 in Bajaj Finserv, completed and awarded for excellence in performance.</p>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
-        <ul class="skills-list">
+        <ul>
             <li><strong>Technical:</strong> MS Office Suite, SPSS, Data Analysis</li>
             <li><strong>Interpersonal:</strong> Communication, Team Collaboration, Adaptability</li>
         </ul>
     </section>
 
+    <!-- Experience Section -->
     <section id="experience">
         <h2>Experience</h2>
         <p><strong>Swiggy Delivery Partner</strong></p>
-        <ul class="experience-list">
+        <ul>
             <li>Ensured timely delivery of orders with a focus on customer satisfaction.</li>
             <li>Developed time management and problem-solving skills in dynamic environments.</li>
         </ul>
         <p><strong>Website Developer</strong></p>
-        <ul class="experience-list">
-            <li>Ensured timely delivery of websites with a focus on customer needs and wants.</li>
-            <li>Developed time management and adaptability to the work.
-            <br><strong>(CRM)
-            <br>•Wordpress<br>•Wix<br>•shopify</strong> </li>
+        <ul>
+            <li>Created and delivered websites tailored to client needs using platforms like WordPress, Wix, and Shopify.</li>
+            <li>Demonstrated time management and adaptability in completing projects efficiently.</li>
         </ul>
+        <div class="experience-images">
+            <img src="your-image-url-1.jpg" alt="Project 1">
+            <img src="your-image-url-2.jpg" alt="Project 2">
+            <img src="your-image-url-3.jpg" alt="Project 3">
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>© 2025 Jerome J. All Rights Reserved.</p>
     </footer>
